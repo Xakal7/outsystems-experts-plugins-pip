@@ -35,7 +35,7 @@ module.exports = function (context) {
             var actString = data.match(mainActReg)[0];
 
             var test = changeProperty(actString, "configChanges", "orientation|keyboardHidden|keyboard|screenSize|locale", true);
-            //changeProperty(actString, "launchMode", "singleTask", true);
+            test = changeProperty(test, "launchMode", "singleTask", true);
             test = changeProperty(test, "supportsPictureInPicture", "true", false);
             test = changeProperty(test, "resizeableActivity", "true", false);
 
